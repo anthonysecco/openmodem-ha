@@ -1,0 +1,23 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to OpenModem",
+        "description": "Enter the LAN IP address of the RM520N-GL modem running OpenModem (the same address you use for its web UI).",
+        "data": {
+          "host": "Host (IP address)",
+          "port": "Port",
+          "scan_interval": "Scan interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect to OpenModem at that address/port.",
+      "timeout": "Timed out waiting for a response from OpenModem.",
+      "unexpected_response": "Connected, but the response didn't look like ha_state.sh's expected JSON. Is OpenModem up to date?"
+    },
+    "abort": {
+      "already_configured": "This OpenModem is already configured."
+    }
+  }
+}
