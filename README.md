@@ -1,5 +1,7 @@
 # OpenModem for Home Assistant
 
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-yellow.svg)](https://www.buymeacoffee.com/anthonysecco)
+
 A [HACS](https://hacs.xyz/) custom integration for [OpenModem](https://github.com/anthonysecco/OpenModem) — a local web front end for the Quectel RM520N-GL modem. This integration polls OpenModem's `ha_state.sh` endpoint over your LAN and exposes the modem's signal, registration, carrier aggregation, WAN, LAN, and connectivity-check data as Home Assistant entities.
 
 No cloud, no API keys — this talks directly to the modem's own web server on your network, the same way OpenModem's own dashboard does.
@@ -67,6 +69,10 @@ All entities group under a single **OpenModem** device. Most are `diagnostic`-ca
 
 - **"Could not connect"** during setup: confirm you can reach `http://<modem-ip>:8080/cgi-bin/ha_state.sh` directly from a browser on the same network as Home Assistant, and that OpenModem's firewall rules (`apply_iptables.sh`) allow that source interface — by default, port 8080 is only accepted from specific interfaces (LAN bridge, ethernet, Tailscale), not arbitrary sources.
 - **"Unexpected response"**: your OpenModem install predates `ha_state.sh` — update it first.
+
+## 💖 Support
+
+If you found this project useful, consider [buying me a coffee](https://www.buymeacoffee.com/anthonysecco). ☕
 
 ## AI Disclosure
 
